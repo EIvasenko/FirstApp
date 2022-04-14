@@ -7,8 +7,39 @@ class Test
     public static void Main()
     {   SqlConnection sqlConnection = new SqlConnection("Server = localhost\\SqlExpress; Database = Homework; Trusted_Connection = True;");
         sqlConnection.Open();
+        /*Write
+        string sqlQuery = "INSERT INTO Samples VALUES (3, 'Ivanov', 'Igor', 25)";
+        using (SqlCommand command = new SqlCommand(sqlQuery, sqlConnection))
+        {
+           int n = command.ExecuteNonQuery();
+        }*/
+        /*Read
+        string sqlQuery = "SELECT * FROM Samples";
+        using (SqlCommand command = new SqlCommand(sqlQuery, sqlConnection))
+        {
+           using (SqlDataReader reader = command.ExecuteReader())
+           {
+                while (reader.Read())
+                {
+                    Console.WriteLine($"{reader["ID"]} {reader["Name"]} {reader["Surname"]} {reader["Age"]}");
+                }
+            }
+        }*/
+        /*Delete
+        string sqlQuery = "DELETE FROM Samples WHERE Name='Igor'";
+        using (SqlCommand command = new SqlCommand(sqlQuery, sqlConnection))
+        {
+            int n = command.ExecuteNonQuery();
+        }*/
+        /*Update
+        string sqlQuery = "UPDATE Samples SET NAME='Vasya' WHERE NAME='Igor'";
+        using (SqlCommand command = new SqlCommand(sqlQuery, sqlConnection))
+        {
+            int n = command.ExecuteNonQuery();
+        }*/
 
-        sqlConnection.Close();
+
+           sqlConnection.Close();
         int i = 1;
         while (i > 0)
         {
