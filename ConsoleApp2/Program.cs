@@ -2,12 +2,18 @@
 using System;
 using System.IO;
 using System.Data.SqlClient;
+using ConsoleApp2;
+
 class Test
 {
     public static void Main()
-    {   SqlConnection sqlConnection = new SqlConnection("Server = localhost\\SqlExpress; Database = Homework; Trusted_Connection = True;");
+    {   
+        Program z = new Program();
+        z.FillDatabase();
+
+        /*SqlConnection sqlConnection = new SqlConnection("Server = localhost\\SqlExpress; Database = Homework; Trusted_Connection = True;");
         sqlConnection.Open();
-        /*Write
+        Write
         string sqlQuery = "INSERT INTO Samples VALUES (3, 'Ivanov', 'Igor', 25)";
         using (SqlCommand command = new SqlCommand(sqlQuery, sqlConnection))
         {
@@ -36,10 +42,10 @@ class Test
         using (SqlCommand command = new SqlCommand(sqlQuery, sqlConnection))
         {
             int n = command.ExecuteNonQuery();
-        }*/
+        }
 
 
-           sqlConnection.Close();
+           sqlConnection.Close();*/
         int i = 1;
         while (i > 0)
         {
